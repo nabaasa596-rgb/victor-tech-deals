@@ -1,245 +1,475 @@
-/* ===== GENERAL ===== */
+/* =====================================================
+   VICTOR TECH DEALS
+   Modern Responsive Website CSS
+   ===================================================== */
 
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-    margin: 0;
-    font-family: Arial, sans-s;
-    background: #f4f7fb;
-    color: #222;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f7fc;
+    color: #172033;
     line-height: 1.6;
 }
 
-/* ===== HEADER ===== */
+/* =====================================================
+   HEADER
+   ===================================================== */
 
-header {
-    background: #111827;
+.site-header {
+    background: #071127;
     color: white;
-    text-align: center;
-    padding: 45px 20px;
+    min-height: 150px;
+    padding: 25px 7%;
+    display: flex;
+    align-items: center;
+    gap: 25px;
 }
 
-header h1 {
+.site-header .logo {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.site-header h1 {
+    font-size: 42px;
     margin: 0;
-    font-size: 38px;
+    font-weight: 800;
+    letter-spacing: -1px;
 }
 
-header p {
-    margin-top: 10px;
+.site-header p {
+    margin-top: 5px;
     font-size: 18px;
+    color: #b9c8e8;
 }
 
-/* ===== NAVIGATION ===== */
+/* =====================================================
+   NAVIGATION
+   ===================================================== */
 
 nav {
-    background: #2563eb;
-    padding: 15px;
-    text-align: center;
+    background: linear-gradient(90deg, #0757d9, #079bea);
+    min-height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    padding: 10px 20px;
+    gap: 5px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin: 0 12px;
-    font-weight: bold;
+    font-weight: 700;
+    font-size: 16px;
+
+    padding: 10px 16px;
+    border-radius: 8px;
+
+    transition: 0.25s ease;
 }
 
 nav a:hover {
-    text-decoration: underline;
+    background: rgba(255, 255, 255, 0.18);
+    transform: translateY(-2px);
 }
 
-/* ===== MAIN ===== */
-
-main {
-    max-width: 1100px;
-    margin: auto;
-    padding: 30px 20px;
-}
-
-/* ===== HERO ===== */
+/* =====================================================
+   HERO
+   ===================================================== */
 
 .hero {
+    max-width: 1150px;
+    margin: 35px auto;
+    padding: 80px 30px;
+
     background: white;
+    border-radius: 20px;
+
     text-align: center;
-    padding: 70px 25px;
-    border-radius: 15px;
-    margin-bottom: 40px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+
+    box-shadow: 0 10px 35px rgba(0, 30, 80, 0.08);
 }
 
 .hero h2 {
-    font-size: 34px;
-    margin-bottom: 15px;
+    font-size: 52px;
+    line-height: 1.1;
+    color: #101a30;
+    margin-bottom: 20px;
+}
+
+.hero h2 span {
+    color: #0878e8;
 }
 
 .hero p {
-    color: #555;
-    font-size: 18px;
-    margin-bottom: 25px;
+    max-width: 700px;
+    margin: 0 auto 30px;
+
+    color: #5d687c;
+    font-size: 19px;
 }
 
-/* ===== BUTTON ===== */
+/* =====================================================
+   BUTTONS
+   ===================================================== */
 
-.button {
+.btn {
     display: inline-block;
-    background: #2563eb;
+
+    background: linear-gradient(90deg, #0757d9, #078fe9);
     color: white;
-    padding: 12px 22px;
-    border-radius: 8px;
+
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 700;
+
+    padding: 13px 25px;
+    border-radius: 8px;
+
+    box-shadow: 0 5px 15px rgba(0, 100, 220, 0.2);
+
+    transition: 0.25s ease;
 }
 
-.button:hover {
-    background: #1d4ed8;
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 100, 220, 0.3);
 }
 
-/* ===== ARTICLES ===== */
+/* =====================================================
+   SECTION
+   ===================================================== */
 
-#articles h2 {
+section {
+    width: 100%;
+}
+
+section h2 {
     text-align: center;
-    margin-bottom: 30px;
-    font-size: 30px;
 }
 
-.articles {
+/* =====================================================
+   TECHNOLOGY GUIDES
+   ===================================================== */
+
+#guides {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 25px;
+}
+
+#guides > h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+/* If your cards use .cards */
+.cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
 }
 
-/* ===== CARDS ===== */
+/* General card design */
 
 .card {
     background: white;
-    padding: 25px;
+    padding: 28px;
     border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-    transition: transform 0.2s;
+
+    border: 1px solid #e6ebf3;
+
+    box-shadow: 0 8px 25px rgba(0, 30, 80, 0.06);
+
+    transition: 0.25s ease;
 }
 
 .card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 30, 80, 0.12);
 }
 
 .card h3 {
-    margin-top: 0;
+    color: #14213d;
     font-size: 21px;
+    margin-bottom: 12px;
 }
 
 .card p {
-    color: #555;
-    margin-bottom: 25px;
+    color: #626e80;
+    margin-bottom: 18px;
 }
 
-/* ===== ABOUT ===== */
-
-.about {
-    background: white;
-    margin-top: 45px;
-    padding: 35px;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+.card a {
+    color: #076be0;
+    font-weight: 700;
+    text-decoration: none;
 }
 
-.about h2 {
-    margin-top: 0;
+.card a:hover {
+    text-decoration: underline;
 }
 
-/* ===== FOOTER ===== */
+/* =====================================================
+   WHY VICTOR TECH DEALS
+   ===================================================== */
+
+.why-us {
+    background: #eaf3ff;
+    margin-top: 60px;
+    padding: 60px 25px;
+}
+
+.why-us h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.why-us p {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    color: #56647a;
+    font-size: 17px;
+}
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
 
 footer {
-    background: #111827;
-    color: white;
+    background: #071127;
+    color: #b9c8e8;
+
+    padding: 35px 20px;
     text-align: center;
-    padding: 30px 15px;
-    margin-top: 50px;
+
+    margin-top: 60px;
 }
 
 footer a {
     color: white;
     text-decoration: none;
+    margin: 0 10px;
 }
 
-/* ===== MOBILE ===== */
+footer a:hover {
+    color: #159eff;
+}
 
-@media (max-width: 800px) {
+footer p {
+    margin: 10px 0;
+}
 
-    header h1 {
-        font-size: 30px;
+/* =====================================================
+   IMAGES
+   ===================================================== */
+
+img {
+    max-width: 100%;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* =====================================================
+   TABLETS
+   ===================================================== */
+
+@media (max-width: 900px) {
+
+    .site-header {
+        padding: 25px 30px;
     }
 
-    nav a {
-        display: inline-block;
-        margin: 6px 8px;
-    }
-
-    .articles {
-        grid-template-columns: 1fr;
-    }
-
-    .hero {
-        padding: 45px 20px;
+    .site-header h1 {
+        font-size: 36px;
     }
 
     .hero h2 {
+        font-size: 44px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* =====================================================
+   ANDROID / MOBILE
+   ===================================================== */
+
+@media (max-width: 600px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    /* Header */
+
+    .site-header {
+        min-height: auto;
+
+        padding: 22px 15px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        gap: 12px;
+
+        text-align: left;
+    }
+
+    .site-header .logo {
+        width: 75px;
+        height: 75px;
+    }
+
+    .site-header h1 {
+        font-size: 27px;
+        line-height: 1.15;
+    }
+
+    .site-header p {
+        font-size: 13px;
+        line-height: 1.4;
+        margin-top: 5px;
+    }
+
+    /* Navigation */
+
+    nav {
+        padding: 12px 8px;
+        gap: 3px;
+    }
+
+    nav a {
+        font-size: 14px;
+        padding: 8px 10px;
+        margin: 2px;
+    }
+
+    /* Hero */
+
+    .hero {
+        margin: 20px 12px;
+        padding: 45px 18px;
+
+        border-radius: 16px;
+    }
+
+    .hero h2 {
+        font-size: 34px;
+        line-height: 1.15;
+    }
+
+    .hero p {
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 25px;
+    }
+
+    .btn {
+        font-size: 15px;
+        padding: 11px 20px;
+    }
+
+    /* Guides */
+
+    #guides {
+        margin: 35px auto;
+        padding: 0 15px;
+    }
+
+    #guides > h2 {
         font-size: 27px;
     }
 
-    main {
-        padding: 20px 15px;
+    .cards {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .card {
+        padding: 22px;
+    }
+
+    .card h3 {
+        font-size: 19px;
+    }
+
+    /* Why section */
+
+    .why-us {
+        padding: 45px 18px;
+    }
+
+    .why-us h2 {
+        font-size: 27px;
+    }
+
+    .why-us p {
+        font-size: 15px;
+    }
+
+    /* Footer */
+
+    footer {
+        padding: 30px 15px;
+        font-size: 14px;
+    }
+
+    footer a {
+        display: inline-block;
+        margin: 5px;
     }
 }
-body{
-    font-family:'Times New Roman', Times, serif;
-    margin:0;
-    background:#f4f7fc;
-}
 
-header{
-    background:#0a122a;
-    color:white;
-    padding:20px;
-}
+/* =====================================================
+   SMALL PHONES
+   ===================================================== */
 
-.logo-container{
-    display:flex;
-    align-items:center;
-    gap:15px;
-}
+@media (max-width: 380px) {
 
-.logo{
-    width:80px;
-    height:80px;
-}
+    .site-header .logo {
+        width: 65px;
+        height: 65px;
+    }
 
-nav{
-    background:linear-gradient(90deg,#0052cc,#00a2ff);
-    padding:15px;
-}
+    .site-header h1 {
+        font-size: 23px;
+    }
 
-nav a{
-    color:white;
-    text-decoration:none;
-    margin:15px;
-    font-weight:bold;
-}
+    .site-header p {
+        font-size: 11px;
+    }
 
-.hero{
-    text-align:center;
-    padding:60px 20px;
-}
+    nav a {
+        font-size: 12px;
+        padding: 7px 8px;
+    }
 
-.hero h2{
-    font-size:48px;
-}
-
-.btn{
-    background:#0066ff;
-    color:white;
-    padding:12px 25px;
-    border-radius:8px;
-    text-decoration:none;
+    .hero h2 {
+        font-size: 29px;
+    }
 }
