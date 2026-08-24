@@ -6,7 +6,7 @@
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-s;
     background: #f4f7fb;
     color: #222;
     line-height: 1.6;
@@ -191,4 +191,55 @@ footer a {
     main {
         padding: 20px 15px;
     }
+}
+body{
+    font-family:'Times New Roman', Times, serif;
+    margin:0;
+    background:#f4f7fc;
+}
+
+header{
+    background:#0a122a;
+    color:white;
+    padding:20px;
+}
+
+.logo-container{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo{
+    width:80px;
+    height:80px;
+}
+
+nav{
+    background:linear-gradient(90deg,#0052cc,#00a2ff);
+    padding:15px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:15px;
+    font-weight:bold;
+}
+
+.hero{
+    text-align:center;
+    padding:60px 20px;
+}
+
+.hero h2{
+    font-size:48px;
+}
+
+.btn{
+    background:#0066ff;
+    color:white;
+    padding:12px 25px;
+    border-radius:8px;
+    text-decoration:none;
 }
